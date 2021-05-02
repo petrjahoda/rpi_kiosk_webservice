@@ -104,9 +104,9 @@ func StreamNetworkData(streamer *sse.Streamer) {
 			interfaceServerIpAddress := LoadSettingsFromConfigFile()
 			serverAccessible := CheckServerIpAddress(interfaceServerIpAddress)
 			if dhcpEnabled == "yes" {
-				dhcpEnabled = "ano"
+				dhcpEnabled = "yes"
 			} else {
-				dhcpEnabled = "ne"
+				dhcpEnabled = "no"
 			}
 			serverActive := "server not accessible"
 			if serverAccessible {
