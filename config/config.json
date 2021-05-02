@@ -1,0 +1,8 @@
+{
+  "ServerIpAddress": "www.google.com:80",
+  "IpAddress": "192.168.86.253",
+  "Mask": "255.255.255.0",
+  "Gateway": "192.168.86.1",
+  "Dhcp": "false",
+  "Connection": "Wired Connection 1"
+}

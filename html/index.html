@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/keyboard.css">
+    <link rel="stylesheet" href="../css/rpi.css">
+    <script src="../js/index.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Rpi Kiosk Webservice</title>
+</head>
+<body>
+<div id="info-panel"
+     style="position: fixed;left: 50%;top: 5%;transform: translate(-50%, -50%);margin: 0 auto;font-size: 2vw">
+    version {{.Version}}
+</div>
+<div style="position: fixed;left: 50%;top: 8%;transform: translate(-50%, -50%);margin: 0 auto;font-size: 1vw">
+    update every 5 seconds
+</div>
+<div id="server-info"
+     style="position: fixed;left: 50%;top: 10%;transform: translate(-50%, -50%);margin: 0 auto;font-size: 1vw">
+</div>
+<div style="position: fixed;left: 50%;top: 40%;transform: translate(-50%, -50%);margin: 0 0;font-size: 3vw;width: 100%">
+    <div>
+        <div style="display: flex;margin-top: 5px">
+            <div style="flex: 1;text-align: right;margin-right: 10px">IP ADDRESS:</div>
+            <div id="ipaddress" style="flex: 1;text-align: left"> {{.IpAddress}}</div>
+        </div>
+        <div style="display: flex;margin-top: 5px">
+            <div style="flex: 1;text-align: right;margin-right: 10px">MASK:</div>
+            <div id="mask" style="flex: 1;text-align: left"> {{.Mask}}</div>
+        </div>
+        <div style="display: flex;margin-top: 5px">
+            <div style="flex: 1;text-align: right;margin-right: 10px">GATEWAY:</div>
+            <div id="gateway" style="flex: 1;text-align: left"> {{.Gateway}}</div>
+        </div>
+        <div style="display: flex;margin-top: 5px">
+            <div style="flex: 1;text-align: right;margin-right: 10px">SERVER ADDRESS:</div>
+            <div id="server"
+                 style="flex: 1;text-align: left;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">
+                {{.ServerIpAddress}}
+            </div>
+        </div>
+        <div style="display: flex;margin-top: 5px">
+            <div style="flex: 1;text-align: right;margin-right: 10px">DHCP:</div>
+            <div id="dhcp" style="flex: 1;text-align: left"> {{.Dhcp}}</div>
+        </div>
+    </div>
+</div>
+<div id="button-panel"
+     style="position: fixed;left: 50%;top: 70%;transform: translate(-50%, -50%);font-size: 3vw;width: 60vw;display: flex;">
+    <button id="left-button" style="width: 180px;flex:1;margin:10px;height: 6vw;font-size: 2vw;border: 2px solid white">
+        RESET
+    </button>
+    <button id="middle-button"
+            style="width: 180px;flex:1;margin:10px;height: 6vw;font-size: 2vw;border: 2px solid white">SETUP
+    </button>
+    <button id="right-button"
+            style="width: 180px;flex:1;margin:10px;height: 6vw;font-size: 2vw;border: 2px solid white">SHUTDOWN
+    </button>
+</div>
+<div id="version-panel"
+     style="position: fixed;left: 50%;bottom: 5%;transform: translate(-50%, -50%);margin: 0 auto;font-size: 2vw">
+    &copy; 2021 Petr Jahoda
+</div>
+<div id="active-panel" style="position: fixed;right: 5%;bottom: 7%;margin: 0 auto;font-size: 2vw">
+</div>
+<div id="server-active-panel" style="position: fixed;right: 5%;bottom: 12%;margin: 0 auto;font-size: 2vw">
+</div>
+</body>
+</html>
